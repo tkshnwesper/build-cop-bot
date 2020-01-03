@@ -1,7 +1,12 @@
 (ns build-cop-bot.core
+  (:require [clojure.edn]
+            [clojure.java.io])
   (:gen-class))
 
+(defn read-config
+  [file-name]
+  (clojure.edn/read-string (slurp (clojure.java.io/resource file-name))))
+
 (defn -main
-  "I don't do a whole lot ... yet."
   [& args]
   (println "Hello, World!"))

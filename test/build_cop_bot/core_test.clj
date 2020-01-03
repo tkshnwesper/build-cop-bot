@@ -2,6 +2,6 @@
   (:require [clojure.test :refer :all]
             [build-cop-bot.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest read-config-test
+  (testing "property :a from config file is read correctly"
+    (is (= (:a (build-cop-bot.core/read-config "test_config.edn")) "meow"))))
