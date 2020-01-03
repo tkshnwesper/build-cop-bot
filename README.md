@@ -1,32 +1,23 @@
 # build-cop-bot
 
-FIXME: description
+Publishes build fail notifications from GoCD to Google Chat using Webhook API.
 
-## Installation
+## Getting it up and running
 
-Download from http://example.com/FIXME.
+### Create a configuration file
 
-## Usage
+Create a file called `resources/config.edn` which consists of the following data:
 
-FIXME: explanation
+```edn
+{:gocd_token "gocd token"
+ :chat_webhook_url "google chat webhook url"}
+```
 
-    $ java -jar build-cop-bot-0.1.0-standalone.jar [args]
+## Running tests
 
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+```sh
+lein test
+```
 
 ## License
 
